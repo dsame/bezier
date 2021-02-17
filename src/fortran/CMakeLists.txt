@@ -50,10 +50,6 @@ file(GLOB SOURCES *.f90)
 add_library(bezier ${SOURCES} $<TARGET_OBJECTS:quadpack>)
 unset(SOURCES)
 
-if(WIN32 AND CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
-  target_link_libraries(bezier PUBLIC quadmath)
-endif()
-
 if(${BUILD_SHARED_LIBS})
   set_target_properties(
     bezier PROPERTIES VERSION ${bezier_VERSION} SOVERSION 2021
@@ -98,6 +94,13 @@ else()
 endif()
 
 include(GNUInstallDirs)
+if(WIN32 AND CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
+  target_link_libraries(bezier PUBLIC quadmath)
+  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -lquadmath")
+  set(CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} -lquadmath")
+  set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -lquadmath")
+  set(CMAKE_STATIC_LINKER_FLAGS "${CMAKE_STATIC_LINKER_FLAGS} -lquadmath")
+endif()
 install(
   TARGETS bezier
   EXPORT BezierConfig
@@ -115,10 +118,3 @@ set(CMAKE_Fortran_FLAGS_RELEASE ${OLD_CMAKE_Fortran_FLAGS_RELEASE})
 unset(OLD_CMAKE_Fortran_FLAGS)
 unset(OLD_CMAKE_Fortran_FLAGS_DEBUG)
 unset(OLD_CMAKE_Fortran_FLAGS_RELEASE)
-
-if(WIN32 AND CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
-  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -lquadmath")
-  set(CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} -lquadmath")
-  set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -lquadmath")
-  set(CMAKE_STATIC_LINKER_FLAGS "${CMAKE_STATIC_LINKER_FLAGS} -lquadmath")
-endif()
