@@ -5,6 +5,7 @@ on:
   push:
     branches:
     - main
+    - windows-debug-2721
   pull_request:
     branches:
     - main

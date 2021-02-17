@@ -50,6 +50,10 @@ file(GLOB SOURCES *.f90)
 add_library(bezier ${SOURCES} $<TARGET_OBJECTS:quadpack>)
 unset(SOURCES)
 
+if(WIN32 AND CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
+  target_link_libraries(bezier PUBLIC quadmath)
+endif()
+
 if(${BUILD_SHARED_LIBS})
   set_target_properties(
     bezier PROPERTIES VERSION ${bezier_VERSION} SOVERSION 2021
