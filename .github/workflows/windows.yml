@@ -66,6 +66,4 @@ jobs:
           -B .\libbezier-debug\build
     - name: Build and Install libbezier
       shell: powershell
-      run: |
-        $env:Path = "C:\\msys64\\mingw64\\bin;" + $env:Path
-        cmake --build .\libbezier-debug\build --config Debug --target install
+      run: powershell run-cmake.ps1
