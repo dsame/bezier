@@ -26,8 +26,9 @@ jobs:
     - name: Show gfortran Version
       shell: powershell
       run: |
-        $env:Path = "C:\msys64\mingw64\bin;" + $env:Path
+        $env:Path = "C:\\msys64\\mingw64\\bin;" + $env:Path
         gfortran --version
+        where gfortran
     - name: Image Version Info
       shell: powershell
       run: |
@@ -39,7 +40,7 @@ jobs:
     - name: Build and Install libbezier
       shell: powershell
       run: |
-        $env:Path = "C:\msys64\mingw64\bin;" + $env:Path
+        $env:Path = "C:\\msys64\\mingw64\\bin;" + $env:Path
         cmake --version
         cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX:PATH=.\libbezier-debug\usr -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON -G MinGW Makefiles -S src\fortran -B .\libbezier-debug\build
         cmake --build .\libbezier-debug\build --config Debug --target install
