@@ -31,23 +31,15 @@ jobs:
     - name: Where Before and After
       shell: powershell
       run: |
+        Write-Host "  BEFORE cmake:"
         where.exe cmake
+        Write-Host "  BEFORE gfortran:"
         where.exe gfortran
         $env:Path = "C:\\msys64\\mingw64\\bin;" + $env:Path
+        Write-Host "  AFTER gfortran:"
         where.exe cmake
+        Write-Host "  AFTER gfortran:"
         where.exe gfortran
-    - name: Where Sanity Check PS
-      shell: powershell
-      run: |
-        where.exe python
-        where.exe cmake
-        where.exe gfortran
-    - name: Where Sanity Check CMD
-      shell: cmd
-      run: |
-        where python
-        where cmake
-        where gfortran
     - name: Image Version Info
       shell: powershell
       run: |
@@ -61,5 +53,11 @@ jobs:
       run: |
         $env:Path = "C:\\msys64\\mingw64\\bin;" + $env:Path
         cmake --version
-        cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX:PATH=.\libbezier-debug\usr -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON -G MinGW Makefiles -S src\fortran -B .\libbezier-debug\build
+        cmake `
+          -DCMAKE_BUILD_TYPE=Debug `
+          -DCMAKE_INSTALL_PREFIX:PATH=.\libbezier-debug\usr `
+          -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON `
+          -G "MinGW Makefiles" `
+          -S src\fortran `
+          -B .\libbezier-debug\build
         cmake --build .\libbezier-debug\build --config Debug --target install
