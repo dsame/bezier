@@ -36,7 +36,7 @@ jobs:
         Write-Host "  BEFORE gfortran:"
         where.exe gfortran
         $env:Path = "C:\\msys64\\mingw64\\bin;" + $env:Path
-        Write-Host "  AFTER gfortran:"
+        Write-Host "  AFTER cmake:"
         where.exe cmake
         Write-Host "  AFTER gfortran:"
         where.exe gfortran
