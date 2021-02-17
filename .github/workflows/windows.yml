@@ -29,6 +29,11 @@ jobs:
         $env:Path = "C:\\msys64\\mingw64\\bin;" + $env:Path
         gfortran --version
         where gfortran
+    - name: Where gfortran
+      shell: powershell
+      run: |
+        $env:Path = "C:\\msys64\\mingw64\\bin;" + $env:Path
+        where gfortran
     - name: Image Version Info
       shell: powershell
       run: |
