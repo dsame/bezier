@@ -35,11 +35,11 @@ jobs:
     - name: Create Build Directory
       shell: powershell
       run: |
-        New-Item -ItemType Directory -Path D:\a\bezier\bezier\libbezier-debug\build
+        New-Item -ItemType Directory -Path .\libbezier-debug\build
     - name: Build and Install libbezier
       shell: powershell
       run: |
         $env:Path = "C:\msys64\mingw64\bin;" + $env:Path
         cmake --version
-        cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX:PATH=D:\a\bezier\bezier\libbezier-debug\usr -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON -G MinGW Makefiles -S src\fortran -B D:\a\bezier\bezier\libbezier-debug\build
-        cmake --build D:\a\bezier\bezier\libbezier-debug\build --config Debug --target install
+        cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX:PATH=.\libbezier-debug\usr -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON -G MinGW Makefiles -S src\fortran -B .\libbezier-debug\build
+        cmake --build .\libbezier-debug\build --config Debug --target install
