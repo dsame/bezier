@@ -117,6 +117,5 @@ unset(OLD_CMAKE_Fortran_FLAGS_DEBUG)
 unset(OLD_CMAKE_Fortran_FLAGS_RELEASE)
 
 if(WIN32 AND CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
-  set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -lquadmath")
   set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -lquadmath")
 endif()
