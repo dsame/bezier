@@ -44,6 +44,14 @@ jobs:
       shell: powershell
       run: |
         Write-Host "IMAGEOS=$env:IMAGEOS||IMAGEVERSION=$env:IMAGEVERSION"
+    - name: ZZ
+      shell: powershell
+      run: |
+        Set-PSDebug -Trace 1
+        Get-ChildItem -Path C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/10.2.0/
+        Get-ChildItem -Path C:/msys64/mingw64/lib/gcc/
+        Get-ChildItem -Path C:/msys64/mingw64/x86_64-w64-mingw32/lib/
+        Get-ChildItem -Path C:/msys64/mingw64/lib/
     - name: Create Build Directory
       shell: powershell
       run: |
