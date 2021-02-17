@@ -31,17 +31,17 @@ jobs:
     - name: Where Before and After
       shell: powershell
       run: |
-        where cmake
-        where gfortran
+        where.exe cmake
+        where.exe gfortran
         $env:Path = "C:\\msys64\\mingw64\\bin;" + $env:Path
-        where cmake
-        where gfortran
+        where.exe cmake
+        where.exe gfortran
     - name: Where Sanity Check PS
       shell: powershell
       run: |
-        where python
-        where cmake
-        where gfortran
+        where.exe python
+        where.exe cmake
+        where.exe gfortran
     - name: Where Sanity Check CMD
       shell: cmd
       run: |
