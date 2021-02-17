@@ -6,7 +6,7 @@ $BUILD_DIR = "$env:GITHUB_WORKSPACE\libbezier-debug\build"
 C:\msys64\mingw64\bin\cmake.exe -SD:\a\bezier\bezier\src\fortran -BD:\a\bezier\bezier\libbezier-debug\build --check-build-system CMakeFiles\Makefile.cmake 0
 C:\msys64\mingw64\bin\cmake.exe -E cmake_progress_start D:\a\bezier\bezier\libbezier-debug\build\CMakeFiles D:\a\bezier\bezier\libbezier-debug\build\\CMakeFiles\progress.marks
 
-cd /d D:\a\bezier\bezier\libbezier-debug\build  # Added by dhermes
+Set-Location -Path D:\a\bezier\bezier\libbezier-debug\build  # Added by dhermes
 C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\Makefile2 all
 # mingw32-make[1]: Entering directory 'D:/a/bezier/bezier/libbezier-debug/build'
 C:/msys64/mingw64/bin/mingw32-make.exe  -f quadpack\CMakeFiles\quadpack.dir\build.make quadpack/CMakeFiles/quadpack.dir/depend
@@ -19,7 +19,7 @@ C:\msys64\mingw64\bin\cmake.exe -E cmake_depends "MinGW Makefiles" D:\a\bezier\b
 C:/msys64/mingw64/bin/mingw32-make.exe  -f quadpack\CMakeFiles\quadpack.dir\build.make quadpack/CMakeFiles/quadpack.dir/build
 # mingw32-make[2]: Entering directory 'D:/a/bezier/bezier/libbezier-debug/build'
 # [  7%] Building Fortran object quadpack/CMakeFiles/quadpack.dir/d1mach.f.obj
-cd /d D:\a\bezier\bezier\libbezier-debug\build\quadpack  # Added / modified by dhermes
+Set-Location -Path D:\a\bezier\bezier\libbezier-debug\build\quadpack  # Added / modified by dhermes
 C:\msys64\mingw64\bin\gfortran.exe   -g -fno-second-underscore -Wall -Wextra -Wno-compare-reals -Wimplicit-interface -fmax-errors=1 -std=f2008 -fcheck=all -fbacktrace -fimplicit-none -pedantic -g -ffixed-form -c D:\a\bezier\bezier\src\fortran\quadpack\d1mach.f -o CMakeFiles\quadpack.dir\d1mach.f.obj
 # D:\a\bezier\bezier\src\fortran\quadpack\d1mach.f:157:72:
 
@@ -57,7 +57,7 @@ C:\msys64\mingw64\bin\gfortran.exe   -g -fno-second-underscore -Wall -Wextra -Wn
 #       |                                                                        1
 # Warning: Procedure 'i1mcry' called with an implicit interface at (1) [-Wimplicit-interface]
 # [ 15%] Building Fortran object quadpack/CMakeFiles/quadpack.dir/dqagse.f.obj
-cd /d D:\a\bezier\bezier\libbezier-debug\build\quadpack  # Added / modified by dhermes
+Set-Location -Path D:\a\bezier\bezier\libbezier-debug\build\quadpack  # Added / modified by dhermes
 C:\msys64\mingw64\bin\gfortran.exe   -g -fno-second-underscore -Wall -Wextra -Wno-compare-reals -Wimplicit-interface -fmax-errors=1 -std=f2008 -fcheck=all -fbacktrace -fimplicit-none -pedantic -g -ffixed-form -c D:\a\bezier\bezier\src\fortran\quadpack\dqagse.f -o CMakeFiles\quadpack.dir\dqagse.f.obj
 # D:\a\bezier\bezier\src\fortran\quadpack\dqagse.f:218:15:
 
@@ -100,7 +100,7 @@ C:\msys64\mingw64\bin\gfortran.exe   -g -fno-second-underscore -Wall -Wextra -Wn
 #       |                                                                        1
 # Warning: Procedure 'dqelg' called with an implicit interface at (1) [-Wimplicit-interface]
 # [ 23%] Building Fortran object quadpack/CMakeFiles/quadpack.dir/dqelg.f.obj
-cd /d D:\a\bezier\bezier\libbezier-debug\build\quadpack  # Added / modified by dhermes
+Set-Location -Path D:\a\bezier\bezier\libbezier-debug\build\quadpack  # Added / modified by dhermes
 C:\msys64\mingw64\bin\gfortran.exe   -g -fno-second-underscore -Wall -Wextra -Wno-compare-reals -Wimplicit-interface -fmax-errors=1 -std=f2008 -fcheck=all -fbacktrace -fimplicit-none -pedantic -g -ffixed-form -c D:\a\bezier\bezier\src\fortran\quadpack\dqelg.f -o CMakeFiles\quadpack.dir\dqelg.f.obj
 # D:\a\bezier\bezier\src\fortran\quadpack\dqelg.f:83:15:
 
@@ -113,7 +113,7 @@ C:\msys64\mingw64\bin\gfortran.exe   -g -fno-second-underscore -Wall -Wextra -Wn
 #       |              1
 # Warning: Procedure 'd1mach' called with an implicit interface at (1) [-Wimplicit-interface]
 # [ 30%] Building Fortran object quadpack/CMakeFiles/quadpack.dir/dqk21.f.obj
-cd /d D:\a\bezier\bezier\libbezier-debug\build\quadpack  # Added / modified by dhermes
+Set-Location -Path D:\a\bezier\bezier\libbezier-debug\build\quadpack  # Added / modified by dhermes
 C:\msys64\mingw64\bin\gfortran.exe   -g -fno-second-underscore -Wall -Wextra -Wno-compare-reals -Wimplicit-interface -fmax-errors=1 -std=f2008 -fcheck=all -fbacktrace -fimplicit-none -pedantic -g -ffixed-form -c D:\a\bezier\bezier\src\fortran\quadpack\dqk21.f -o CMakeFiles\quadpack.dir\dqk21.f.obj
 # D:\a\bezier\bezier\src\fortran\quadpack\dqk21.f:132:15:
 
@@ -151,11 +151,11 @@ C:\msys64\mingw64\bin\gfortran.exe   -g -fno-second-underscore -Wall -Wextra -Wn
 #       |                1
 # Warning: Procedure 'f' called with an implicit interface at (1) [-Wimplicit-interface]
 # [ 38%] Building Fortran object quadpack/CMakeFiles/quadpack.dir/dqpsrt.f.obj
-cd /d D:\a\bezier\bezier\libbezier-debug\build\quadpack  # Added / modified by dhermes
+Set-Location -Path D:\a\bezier\bezier\libbezier-debug\build\quadpack  # Added / modified by dhermes
 C:\msys64\mingw64\bin\gfortran.exe   -g -fno-second-underscore -Wall -Wextra -Wno-compare-reals -Wimplicit-interface -fmax-errors=1 -std=f2008 -fcheck=all -fbacktrace -fimplicit-none -pedantic -g -ffixed-form -c D:\a\bezier\bezier\src\fortran\quadpack\dqpsrt.f -o CMakeFiles\quadpack.dir\dqpsrt.f.obj
 # mingw32-make[2]: Leaving directory 'D:/a/bezier/bezier/libbezier-debug/build'
 # [ 38%] Built target quadpack
-cd /d D:\a\bezier\bezier\libbezier-debug\build  # Added by dhermes
+Set-Location -Path D:\a\bezier\bezier\libbezier-debug\build  # Added by dhermes
 C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\bezier.dir\build.make CMakeFiles/bezier.dir/depend
 # mingw32-make[2]: Entering directory 'D:/a/bezier/bezier/libbezier-debug/build'
 C:\msys64\mingw64\bin\cmake.exe -E cmake_depends "MinGW Makefiles" D:\a\bezier\bezier\src\fortran D:\a\bezier\bezier\src\fortran D:\a\bezier\bezier\libbezier-debug\build D:\a\bezier\bezier\libbezier-debug\build D:\a\bezier\bezier\libbezier-debug\build\CMakeFiles\bezier.dir\DependInfo.cmake --color=
