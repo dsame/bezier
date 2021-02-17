@@ -197,4 +197,4 @@ C:\msys64\mingw64\bin\cmake.exe -E touch CMakeFiles/bezier.dir/types.f90.obj.pro
 C:\msys64\mingw64\bin\cmake.exe -E cmake_link_script CMakeFiles\bezier.dir\link.txt --verbose=1
 C:\msys64\mingw64\bin\cmake.exe -E rm -f CMakeFiles\bezier.dir/objects.a
 C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\bezier.dir/objects.a @CMakeFiles\bezier.dir\objects1.rsp
-C:\msys64\mingw64\bin\gfortran.exe -g  -static -lquadmath -shared -o bezier.dll "-Wl,--out-implib,bezier.lib" "-Wl,--major-image-version,2021,--minor-image-version,2" "-Wl,--whole-archive" CMakeFiles\bezier.dir/objects.a "-Wl,--no-whole-archive" @CMakeFiles\bezier.dir\linklibs.rsp
+C:\msys64\mingw64\bin\gfortran.exe -g  -static -shared -o bezier.dll "-Wl,--out-implib,bezier.lib" "-Wl,--major-image-version,2021,--minor-image-version,2" "-Wl,--whole-archive" CMakeFiles\bezier.dir/objects.a "-Wl,--no-whole-archive" @CMakeFiles\bezier.dir\linklibs.rsp -lquadmath
