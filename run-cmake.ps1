@@ -1,22 +1,19 @@
 $env:Path = "C:\\msys64\\mingw64\\bin;" + $env:Path
-# WAS: cmake --build .\liXXbbezier-debug\build --config Debug --target install
-$SRC_DIR = "$env:GITHUB_WORKSPACE\src\fortran"
-$BUILD_DIR = "$env:GITHUB_WORKSPACE\libbezier-debug\build"
+# WAS: cmake --build .\libbezier-debug\build --config Debug --target install
 
-C:\msys64\mingw64\bin\cmake.exe -SD:\a\bezier\bezier\src\fortran -BD:\a\bezier\bezier\libbezier-debug\build --check-build-system CMakeFiles\Makefile.cmake 0
-C:\msys64\mingw64\bin\cmake.exe -E cmake_progress_start D:\a\bezier\bezier\libbezier-debug\build\CMakeFiles D:\a\bezier\bezier\libbezier-debug\build\\CMakeFiles\progress.marks
-
+## C:\msys64\mingw64\bin\cmake.exe -SD:\a\bezier\bezier\src\fortran -BD:\a\bezier\bezier\libbezier-debug\build --check-build-system CMakeFiles\Makefile.cmake 0
+## C:\msys64\mingw64\bin\cmake.exe -E cmake_progress_start D:\a\bezier\bezier\libbezier-debug\build\CMakeFiles D:\a\bezier\bezier\libbezier-debug\build\\CMakeFiles\progress.marks
 Set-Location -Path D:\a\bezier\bezier\libbezier-debug\build  # Added by dhermes
-C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\Makefile2 all
+## C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\Makefile2 all
 # mingw32-make[1]: Entering directory 'D:/a/bezier/bezier/libbezier-debug/build'
-C:/msys64/mingw64/bin/mingw32-make.exe  -f quadpack\CMakeFiles\quadpack.dir\build.make quadpack/CMakeFiles/quadpack.dir/depend
+## C:/msys64/mingw64/bin/mingw32-make.exe  -f quadpack\CMakeFiles\quadpack.dir\build.make quadpack/CMakeFiles/quadpack.dir/depend
 # mingw32-make[2]: Entering directory 'D:/a/bezier/bezier/libbezier-debug/build'
-C:\msys64\mingw64\bin\cmake.exe -E cmake_depends "MinGW Makefiles" D:\a\bezier\bezier\src\fortran D:\a\bezier\bezier\src\fortran\quadpack D:\a\bezier\bezier\libbezier-debug\build D:\a\bezier\bezier\libbezier-debug\build\quadpack D:\a\bezier\bezier\libbezier-debug\build\quadpack\CMakeFiles\quadpack.dir\DependInfo.cmake --color=
+## C:\msys64\mingw64\bin\cmake.exe -E cmake_depends "MinGW Makefiles" D:\a\bezier\bezier\src\fortran D:\a\bezier\bezier\src\fortran\quadpack D:\a\bezier\bezier\libbezier-debug\build D:\a\bezier\bezier\libbezier-debug\build\quadpack D:\a\bezier\bezier\libbezier-debug\build\quadpack\CMakeFiles\quadpack.dir\DependInfo.cmake --color=
 # Dependee "D:\a\bezier\bezier\libbezier-debug\build\quadpack\CMakeFiles\quadpack.dir\DependInfo.cmake" is newer than depender "D:/a/bezier/bezier/libbezier-debug/build/quadpack/CMakeFiles/quadpack.dir/depend.internal".
 # Dependee "D:/a/bezier/bezier/libbezier-debug/build/quadpack/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "D:/a/bezier/bezier/libbezier-debug/build/quadpack/CMakeFiles/quadpack.dir/depend.internal".
 # Scanning dependencies of target quadpack
 # mingw32-make[2]: Leaving directory 'D:/a/bezier/bezier/libbezier-debug/build'
-C:/msys64/mingw64/bin/mingw32-make.exe  -f quadpack\CMakeFiles\quadpack.dir\build.make quadpack/CMakeFiles/quadpack.dir/build
+## C:/msys64/mingw64/bin/mingw32-make.exe  -f quadpack\CMakeFiles\quadpack.dir\build.make quadpack/CMakeFiles/quadpack.dir/build
 # mingw32-make[2]: Entering directory 'D:/a/bezier/bezier/libbezier-debug/build'
 # [  7%] Building Fortran object quadpack/CMakeFiles/quadpack.dir/d1mach.f.obj
 Set-Location -Path D:\a\bezier\bezier\libbezier-debug\build\quadpack  # Added / modified by dhermes
@@ -156,14 +153,14 @@ C:\msys64\mingw64\bin\gfortran.exe   -g -fno-second-underscore -Wall -Wextra -Wn
 # mingw32-make[2]: Leaving directory 'D:/a/bezier/bezier/libbezier-debug/build'
 # [ 38%] Built target quadpack
 Set-Location -Path D:\a\bezier\bezier\libbezier-debug\build  # Added by dhermes
-C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\bezier.dir\build.make CMakeFiles/bezier.dir/depend
+## C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\bezier.dir\build.make CMakeFiles/bezier.dir/depend
 # mingw32-make[2]: Entering directory 'D:/a/bezier/bezier/libbezier-debug/build'
-C:\msys64\mingw64\bin\cmake.exe -E cmake_depends "MinGW Makefiles" D:\a\bezier\bezier\src\fortran D:\a\bezier\bezier\src\fortran D:\a\bezier\bezier\libbezier-debug\build D:\a\bezier\bezier\libbezier-debug\build D:\a\bezier\bezier\libbezier-debug\build\CMakeFiles\bezier.dir\DependInfo.cmake --color=
+## C:\msys64\mingw64\bin\cmake.exe -E cmake_depends "MinGW Makefiles" D:\a\bezier\bezier\src\fortran D:\a\bezier\bezier\src\fortran D:\a\bezier\bezier\libbezier-debug\build D:\a\bezier\bezier\libbezier-debug\build D:\a\bezier\bezier\libbezier-debug\build\CMakeFiles\bezier.dir\DependInfo.cmake --color=
 # Dependee "D:\a\bezier\bezier\libbezier-debug\build\CMakeFiles\bezier.dir\DependInfo.cmake" is newer than depender "D:/a/bezier/bezier/libbezier-debug/build/CMakeFiles/bezier.dir/depend.internal".
 # Dependee "D:/a/bezier/bezier/libbezier-debug/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "D:/a/bezier/bezier/libbezier-debug/build/CMakeFiles/bezier.dir/depend.internal".
 # Scanning dependencies of target bezier
 # mingw32-make[2]: Leaving directory 'D:/a/bezier/bezier/libbezier-debug/build'
-C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\bezier.dir\build.make CMakeFiles/bezier.dir/build
+## C:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\bezier.dir\build.make CMakeFiles/bezier.dir/build
 # mingw32-make[2]: Entering directory 'D:/a/bezier/bezier/libbezier-debug/build'
 # [ 46%] Building Fortran object CMakeFiles/bezier.dir/types.f90.obj
 C:\msys64\mingw64\bin\gfortran.exe -Dbezier_EXPORTS  -g -fno-second-underscore -Wall -Wextra -Wno-compare-reals -Wno-conversion -Wimplicit-interface -fmax-errors=1 -std=f2008 -fcheck=all -fbacktrace -fimplicit-none -pedantic -g -c D:\a\bezier\bezier\src\fortran\types.f90 -o CMakeFiles\bezier.dir\types.f90.obj
@@ -194,7 +191,7 @@ C:\msys64\mingw64\bin\cmake.exe -E cmake_copy_f90_mod triangle_intersection.mod 
 C:\msys64\mingw64\bin\cmake.exe -E touch CMakeFiles/bezier.dir/triangle_intersection.f90.obj.provides.build
 C:\msys64\mingw64\bin\cmake.exe -E touch CMakeFiles/bezier.dir/types.f90.obj.provides.build
 # [100%] Linking Fortran shared library bezier.dll
-C:\msys64\mingw64\bin\cmake.exe -E cmake_link_script CMakeFiles\bezier.dir\link.txt --verbose=1
+## C:\msys64\mingw64\bin\cmake.exe -E cmake_link_script CMakeFiles\bezier.dir\link.txt --verbose=1
 C:\msys64\mingw64\bin\cmake.exe -E rm -f CMakeFiles\bezier.dir/objects.a
 C:\msys64\mingw64\bin\ar.exe cr CMakeFiles\bezier.dir/objects.a @CMakeFiles\bezier.dir\objects1.rsp
 C:\msys64\mingw64\bin\gfortran.exe -g  -static -shared -o bezier.dll "-Wl,--out-implib,bezier.lib" "-Wl,--major-image-version,2021,--minor-image-version,2" "-Wl,--whole-archive" CMakeFiles\bezier.dir/objects.a "-Wl,--no-whole-archive" @CMakeFiles\bezier.dir\linklibs.rsp -lquadmath
