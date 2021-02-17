@@ -1,8 +1,10 @@
 $env:Path = "C:\\msys64\\mingw64\\bin;" + $env:Path
 # WAS: cmake --build .\libbezier-debug\build --config Debug --target install
 
-# Equivalent to `set -e` in `bash`
+# Roughly equivalent to `set -e` in `bash`
 $ErrorActionPreference = "Stop"
+# Roughly equivalent to `set -x` in `bash`
+Set-PSDebug -Trace 1
 
 ## C:\msys64\mingw64\bin\cmake.exe -SD:\a\bezier\bezier\src\fortran -BD:\a\bezier\bezier\libbezier-debug\build --check-build-system CMakeFiles\Makefile.cmake 0
 ## C:\msys64\mingw64\bin\cmake.exe -E cmake_progress_start D:\a\bezier\bezier\libbezier-debug\build\CMakeFiles D:\a\bezier\bezier\libbezier-debug\build\\CMakeFiles\progress.marks
