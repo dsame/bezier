@@ -21,7 +21,7 @@ endif()
 
 if(WIN32 AND CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
   link_libraries(quadmath)
-## set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -static")
+### set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -static")
   if(NOT CMAKE_IMPORT_LIBRARY_SUFFIX_Fortran)
     set(CMAKE_IMPORT_LIBRARY_SUFFIX_Fortran ".lib")
   endif()
