@@ -23,7 +23,7 @@ endif()
 
 if(WIN32 AND CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
   link_libraries(quadmath)
-  set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -static")
+  set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -static --default-image-base-low")
   if(NOT CMAKE_IMPORT_LIBRARY_SUFFIX_Fortran)
     set(CMAKE_IMPORT_LIBRARY_SUFFIX_Fortran ".lib")
   endif()
@@ -97,6 +97,7 @@ else()
   message(FATAL_ERROR "gfortran and ifort are the only supported compilers")
 endif()
 
+######
 target_compile_options(
   bezier 
   PUBLIC -Wl,--default-image-base-low
@@ -112,6 +113,12 @@ if(WIN32 AND CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
   set(CMAKE_STATIC_LINKER_FLAGS "${CMAKE_STATIC_LINKER_FLAGS} -lquadmath")
   set(CMAKE_Fortran_LINK_EXECUTABLE "${CMAKE_Fortran_LINK_EXECUTABLE} -lquadmath")
 endif()
+
+target_compile_options(
+  bezier 
+  PUBLIC -Wl,--default-image-base-low
+)
+
 install(
   TARGETS bezier
   EXPORT BezierConfig
