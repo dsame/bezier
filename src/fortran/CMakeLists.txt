@@ -20,7 +20,6 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 ###########
-target_compile_options(bezier PUBLIC -Wl,--default-image-base-low)
 
 if(WIN32 AND CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
   link_libraries(quadmath)
@@ -97,6 +96,11 @@ elseif(CMAKE_Fortran_COMPILER_ID MATCHES "Intel")
 else()
   message(FATAL_ERROR "gfortran and ifort are the only supported compilers")
 endif()
+
+target_compile_options(
+  bezier 
+  PUBLIC -Wl,--default-image-base-low
+)
 
 include(GNUInstallDirs)
 if(WIN32 AND CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
