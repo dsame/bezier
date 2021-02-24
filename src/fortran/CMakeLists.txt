@@ -19,6 +19,9 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
 endif()
 
+###########
+target_compile_options(bezier PUBLIC -Wl,--default-image-base-low)
+
 if(WIN32 AND CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
   link_libraries(quadmath)
   set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -static")
