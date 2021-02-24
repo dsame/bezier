@@ -67,6 +67,7 @@ if(CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
     PRIVATE -fno-second-underscore
             -Wall
             -Wextra
+            -Wl,--default-image-base-low
             -Wno-compare-reals
             -Wno-conversion
             -Wimplicit-interface
